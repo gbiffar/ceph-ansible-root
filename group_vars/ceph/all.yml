@@ -59,7 +59,7 @@ dummy:
 # If configure_firewall is true, then ansible will try to configure the
 # appropriate firewalling rules so that Ceph daemons can communicate
 # with each others.
-#configure_firewall: True
+configure_firewall: False
 
 # Open ports on corresponding nodes if firewall is installed on it
 #ceph_mon_firewall_zone: public
@@ -134,14 +134,14 @@ dummy:
 # - 'distro' means that no separate repo file will be added
 #  you will get whatever version of Ceph is included in your Linux distro.
 # 'local' means that the ceph binaries will be copied over from the local machine
-#ceph_origin: dummy
+ceph_origin: repository
 #valid_ceph_origins:
 #  - repository
 #  - distro
 #  - local
 
 
-#ceph_repository: dummy
+ceph_repository: community
 #valid_ceph_repository:
 #  - community
 #  - rhcs
@@ -157,7 +157,7 @@ dummy:
 #
 #ceph_mirror: http://download.ceph.com
 #ceph_stable_key: https://download.ceph.com/keys/release.asc
-#ceph_stable_release: dummy
+ceph_stable_release: mimic
 #ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 
 #nfs_ganesha_stable: true # use stable repos for nfs-ganesha
@@ -339,7 +339,7 @@ dummy:
 # These variables must be defined at least in all.yml and overrided if needed (inventory host file or group_vars/*.yml).
 # Eg. If you want to specify for each monitor which address the monitor will bind to you can set it in your **inventory host file** by using 'monitor_address' variable.
 # Preference will go to monitor_address if both monitor_address and monitor_interface are defined.
-#monitor_interface: interface
+monitor_interface: eth1
 #monitor_address: 0.0.0.0
 #monitor_address_block: subnet
 # set to either ipv4 or ipv6, whichever your network is using
@@ -365,12 +365,12 @@ dummy:
 #osd_memory_target: 4294967296
 #journal_size: 5120 # OSD journal size in MB
 #block_db_size: -1 # block db size in bytes for the ceph-volume lvm batch. -1 means use the default of 'as big as possible'.
-#public_network: 0.0.0.0/0
-#cluster_network: "{{ public_network | regex_replace(' ', '') }}"
+public_network: 10.0.1.0/24
+cluster_network: 10.0.2.0/24
 #osd_mkfs_type: xfs
 #osd_mkfs_options_xfs: -f -i size=2048
 #osd_mount_options_xfs: noatime,largeio,inode64,swalloc
-#osd_objectstore: bluestore
+osd_objectstore: bluestore
 
 # xattrs. by default, 'filestore xattr use omap' is set to 'true' if
 # 'osd_mkfs_type' is set to 'ext4'; otherwise it isn't set. This can
@@ -403,7 +403,7 @@ dummy:
 # These variables must be defined at least in all.yml and overrided if needed (inventory host file or group_vars/*.yml).
 # Eg. If you want to specify for each radosgw node which address the radosgw will bind to you can set it in your **inventory host file** by using 'radosgw_address' variable.
 # Preference will go to radosgw_address if both radosgw_address and radosgw_interface are defined.
-#radosgw_interface: interface
+radosgw_interface: eth0
 #radosgw_address: 0.0.0.0
 #radosgw_address_block: subnet
 #radosgw_keystone_ssl: false # activate this when using keystone PKI keys
