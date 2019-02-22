@@ -1,0 +1,3 @@
+[submodule "external/ceph-ansible"]
+	path = external/ceph-ansible
+	url = https://github.com/ceph/ceph-ansible.git
