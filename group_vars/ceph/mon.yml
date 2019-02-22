@@ -35,23 +35,23 @@ dummy:
 ###############
 # CRUSH RULES #
 ###############
-#crush_rule_config: false
+crush_rule_config: true
 
-#crush_rule_hdd:
-#  name: HDD
-#  root: HDD
-#  type: host
-#  default: false
+crush_rule_hdd:
+  name: HDD
+  root: default
+  type: host
+  default: false
 
-#crush_rule_ssd:
-#  name: SSD
-#  root: SSD
-#  type: host
-#  default: false
+crush_rule_ssd:
+  name: SSD
+  root: default
+  type: host
+  default: false
 
-#crush_rules:
-#  - "{{ crush_rule_hdd }}"
-#  - "{{ crush_rule_ssd }}"
+crush_rules:
+  - "{{ crush_rule_hdd }}"
+  - "{{ crush_rule_ssd }}"
 
 # Caution: this will create crush roots and racks according to hostvars {{ osd_crush_location }}
 # and will move hosts into them which might lead to significant data movement in the cluster!
@@ -62,7 +62,7 @@ dummy:
 # ceph-osd-01 osd_crush_location="{ 'root': 'mon-roottt', 'rack': 'mon-rackkkk', 'pod': 'monpod', 'host': 'ceph-osd-01' }"
 #
 # Note that 'host' is mandatory and that you need to submit at least two bucket type (including the host)
-#create_crush_tree: false
+create_crush_tree: true
 
 ##########
 # DOCKER #
