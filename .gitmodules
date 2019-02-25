@@ -7,3 +7,6 @@
 [submodule "roles/groups"]
 	path = roles/groups
 	url = https://github.com/kevincoakley/ansible-role-group.git
+[submodule "roles/packages"]
+	path = roles/packages
+	url = https://github.com/kevincoakley/ansible-role-package.git
