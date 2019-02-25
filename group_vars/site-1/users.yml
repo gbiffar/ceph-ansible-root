@@ -1,0 +1,10 @@
+---
+group_list:
+  - name: osn
+user_list:
+  - name: site1adm
+    comment: "Site 1 Admin"
+    groups: osn
+    append: yes
+    ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJFfv0gF6eiiO45DurnhLDqKFDjXpRj84aA3ptAjXhlr6p/U/388jhoJkyGlmFY+ndssYt1Z1jZoaUgZT5iNm9rX9mxxVUDKQlIslmYIJ5ObjVU8/ctv4RgtTdAdUWzPM4/g1eTrpj39gpxEL69Cm8gzDiOveEVS8gd1Ek/+Jye4L4gF/FXe+2lfOyUOnlTNo4I6pMQ17gM4X8xAga9TBVKxMQexzn1Mj/tUqtfh7657vz/R/yhKMMWjaBZqRtKW8CN3+0iXrbfisI7cWzN9ROL7/e5QeTHJdB7wGmx9ZVpkbfBWb+9X9vriJVZCENqPjftJVCcS//5M7br/x3M76p Generated-by-Nova"
+    sudoers: true

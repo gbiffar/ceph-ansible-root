@@ -1,0 +1,11 @@
+---
+- hosts:
+    - all-sites
+  remote_user: centos
+  become: yes
+  become_method: sudo
+
+  roles:
+    - groups
+    - users
+    - packages

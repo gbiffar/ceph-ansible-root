@@ -29,3 +29,6 @@ mons
 mgrs
 osds
 mgrs
+
+[all-sites:children]
+site-1
