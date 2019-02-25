@@ -1,3 +1,6 @@
 [submodule "external/ceph-ansible"]
 	path = external/ceph-ansible
 	url = https://github.com/ceph/ceph-ansible.git
+[submodule "roles/users"]
+	path = roles/users
+	url = https://github.com/kevincoakley/ansible-role-user.git
