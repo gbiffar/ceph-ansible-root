@@ -31,7 +31,7 @@ dummy:
 #  dev: 99
 
 # Directory to fetch cluster fsid, keys etc...
-#fetch_directory: fetch/
+fetch_directory: fetch/site-2/
 
 # The 'cluster' variable determines the name of the cluster.
 # Changing the default value to something else means that you will
